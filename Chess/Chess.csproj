@@ -6,4 +6,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chess.Models\Chess.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\WhitePawn.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

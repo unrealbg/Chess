@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: Chess, Configuration: Debug Any CPU ------
+1>You are using a preview version of .NET Core. See: https://aka.ms/dotnet-core-preview
+1>Chess -> E:\Repos\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.dll
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
