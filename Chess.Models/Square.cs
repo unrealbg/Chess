@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Chess.Models
+﻿namespace Chess.Models
 {
     public class Square : BasePositionModel
     {

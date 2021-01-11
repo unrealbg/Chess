@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Chess.Models
+﻿namespace Chess.Models
 {
     public class Empty : ChessFigure
     {

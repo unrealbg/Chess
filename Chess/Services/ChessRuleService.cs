@@ -1,11 +1,10 @@
-﻿using Chess.Models;
-using Chess.Services.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Chess.Services
+﻿namespace Chess.Services
 {
+    using System;
+
+    using Chess.Models;
+    using Chess.Services.Contracts;
+
     //TODO: the rest of the rules
     class ChessRuleService : IChessRulesService
     {

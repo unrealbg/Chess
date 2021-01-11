@@ -1,20 +1,11 @@
-﻿using Autofac;
-using Chess.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace Chess.Views
+﻿namespace Chess.Views
 {
+    using System.Windows.Controls;
+
+    using Autofac;
+
+    using Chess.ViewModels;
+
     /// <summary>
     /// Interaction logic for ChessGridView.xaml
     /// </summary>

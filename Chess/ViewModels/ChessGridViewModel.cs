@@ -1,16 +1,11 @@
-﻿using Chess.Models;
-using Chess.Services.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media.Animation;
-
-namespace Chess.ViewModels
+﻿namespace Chess.ViewModels
 {
+    using System.Collections.ObjectModel;
+    using System.Windows.Input;
+
+    using Chess.Models;
+    using Chess.Services.Contracts;
+
     public class ChessGridViewModel
     {
         private readonly IBoardGeneratorService generatorService;

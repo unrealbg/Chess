@@ -1,14 +1,9 @@
-﻿using Autofac;
-using Chess.Services;
-using Chess.Services.Contracts;
-using Chess.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-
-namespace Chess
+﻿namespace Chess
 {
+    using System.Reflection;
+
+    using Autofac;
+
     public static class Bootstrapper
     {
         public static IContainer Container { get; set; }

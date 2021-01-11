@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
-
-namespace Chess
+﻿namespace Chess
 {
+    using System;
+    using System.Windows.Input;
+ 
     public class RelayCommand<T> : ICommand
     {
         #region Fields

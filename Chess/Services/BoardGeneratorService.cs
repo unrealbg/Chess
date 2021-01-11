@@ -1,17 +1,9 @@
-﻿using Chess.Common;
-using Chess.Models;
-using Chess.Services.Contracts;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Automation;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System.Xml;
-
-namespace Chess.Services
+﻿namespace Chess.Services
 {
+    using Chess.Common;
+    using Chess.Models;
+    using Chess.Services.Contracts;
+
     public class BoardGeneratorService : IBoardGeneratorService
     {
         public Square[,] Generate()
