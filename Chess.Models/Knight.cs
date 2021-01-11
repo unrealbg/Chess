@@ -9,7 +9,6 @@ namespace Chess.Models
         public Knight(int row, int col, string color, string image)
         : base(row, col, color, image)
         {
-            this.Name = "Knight";
         }
     }
 }

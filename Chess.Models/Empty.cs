@@ -9,7 +9,6 @@ namespace Chess.Models
         public Empty(int row, int col)
             :base(row, col,"", "")
         {
-            this.Name = "Empty";
         }
     }
 }

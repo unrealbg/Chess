@@ -1,10 +1,14 @@
 ﻿using Chess.Common;
 using Chess.Models;
 using Chess.Services.Contracts;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Automation;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Xml;
 
 namespace Chess.Services
 {
@@ -18,18 +22,13 @@ namespace Chess.Services
             {
                 for (int col = 0; col < Constans.BoardCols; col++)
                 {
-                    Square square = null;
                     ChessFigure figure = GetFigure(row, col);
-                    //figure.Image = @"E:\Repos\Chess\Chess\Images\WhitePawn.png";
 
-                    if ((row + col) % 2 == 0)
+                    Square square = ((row + col) % 2) switch
                     {
-                        square = new Square(row, col, "white", figure);
-                    }
-                    else
-                    {
-                        square = new Square(row, col, "black", figure);
-                    }
+                        0 => new Square(row, col, "white", figure),
+                        _ => new Square(row, col, "black", figure),
+                    };
 
                     board[row, col] = square;
                 }
@@ -43,19 +42,36 @@ namespace Chess.Services
         {
             ChessFigure figure = new Empty(row, col);
 
+            // Black Figures
             if (row == 0)
             {
                 if (col == 1 || col == 6)
                 {
-                    figure = new Knight(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackKnight.png");
+                    figure = new Knight(row, col, "white", @"E:\Repos\Chess\Chess\Images\BlackKnight.png");
                 }
 
                 if (col == 3)
                 {
-                    figure = new Queen(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackQueen.png");
+                    figure = new Queen(row, col, "white", @"E:\Repos\Chess\Chess\Images\BlackQueen.png");
+                }
+
+                if (col == 2 || col == 5)
+                {
+                    figure = new Bishop(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackBishop.png");
+                }
+
+                if (col == 4)
+                {
+                    figure = new King(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackKing.png");
+                }
+
+                if (col == 0 || col == 7)
+                {
+                    figure = new Rook(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackRook.png");
                 }
             }
 
+            // White Figures
             if (row == 7)
             {
                 if (col == 1 || col == 6)
@@ -66,6 +82,21 @@ namespace Chess.Services
                 if (col == 3)
                 {
                     figure = new Queen(row, col, "white", @"E:\Repos\Chess\Chess\Images\WhiteQueen.png");
+                }
+
+                if (col == 2 || col == 5)
+                {
+                    figure = new Bishop(row, col, "white", @"E:\Repos\Chess\Chess\Images\WhiteBishop.png");
+                }
+
+                if (col == 4)
+                {
+                    figure = new King(row, col, "white", @"E:\Repos\Chess\Chess\Images\WhiteKing.png");
+                }
+
+                if (col == 0 || col == 7)
+                {
+                    figure = new Rook(row, col, "white", @"E:\Repos\Chess\Chess\Images\WhiteRook.png");
                 }
             }
 

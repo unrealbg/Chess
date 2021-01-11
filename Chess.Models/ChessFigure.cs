@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Chess.Models
 {
-    public class ChessFigure : BasePositionModel
+    public abstract class ChessFigure : BasePositionModel
     {
 
         public ChessFigure(int row, int col, string color, string image)
         {
+            this.Name = this.GetType().Name;
             this.Row = row;
             this.Col = col;
             this.Color = color;

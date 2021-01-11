@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Chess.Models
 {
-    public class Queen : ChessFigure
+    public class King : ChessFigure
     {
-        public Queen(int row, int col, string color, string image) 
+        public King(int row, int col, string color, string image) 
             : base(row, col, color, image)
         {
         }

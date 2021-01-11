@@ -9,7 +9,6 @@ namespace Chess.Models
         public Pawn(int row, int col, string color, string image)
             :base(row, col, color, image)
         {
-            this.Name = "Pawn";
         }
     }
 }
