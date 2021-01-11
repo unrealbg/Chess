@@ -81,6 +81,11 @@
 
             dynamic tempFigure = selectedFigure;
 
+            if (tempFigure == null)
+            {
+                return;
+            }
+
             if (!rulesService.Check(board, tempFigure, figure))
             {
                 return;

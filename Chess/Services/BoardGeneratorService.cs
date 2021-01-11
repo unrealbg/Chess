@@ -29,7 +29,6 @@
             return board;
         }
 
-        //TODO: Figure Images
         private ChessFigure GetFigure(int row, int col)
         {
             ChessFigure figure = new Empty(row, col);
@@ -39,12 +38,12 @@
             {
                 if (col == 1 || col == 6)
                 {
-                    figure = new Knight(row, col, "white", @"E:\Repos\Chess\Chess\Images\BlackKnight.png");
+                    figure = new Knight(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackKnight.png");
                 }
 
                 if (col == 3)
                 {
-                    figure = new Queen(row, col, "white", @"E:\Repos\Chess\Chess\Images\BlackQueen.png");
+                    figure = new Queen(row, col, "black", @"E:\Repos\Chess\Chess\Images\BlackQueen.png");
                 }
 
                 if (col == 2 || col == 5)
